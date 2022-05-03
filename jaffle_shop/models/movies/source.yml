@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: movies
+    schema: public_dbt
+    tables:
+      - name: movies
+      - name: movies_pull

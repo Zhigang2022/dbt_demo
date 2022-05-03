@@ -1,0 +1,24 @@
+
+version: 2
+
+models:
+  - name: movies_pull
+    description: "movies info"
+    columns:
+      - name: movieId
+        description: "The primary key for movie"
+        tests:
+          - unique
+          - not_null
+          - is_numeric
+      - name: title
+        description: "title of movie"
+        tests:
+         - not_null
+      - name: genres
+        tests:
+         - not_null
+    meta:
+      fal:
+        scripts:
+          - models/movies/python_scripts/movies_pull.py
